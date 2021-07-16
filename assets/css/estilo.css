@@ -1,0 +1,36 @@
+* {
+    font-family: 'Oswald', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    margin: 0px;
+    display: grid;                                       /*css grid pra aplicar o layout*/
+    grid-template-rows: 120px 1fr 60px;                  /*cabeçalho 120px | principal 1 fragmento | rodape 60px */
+    grid-template-columns: 1fr;                          /*fragmento vai ocupar a tela, ou o que sobrar dela, se não tiver nada a mais, ele ocupará a tela toda*/
+    grid-template-areas: 
+    "cabecalho" 
+    "principal" 
+    "rodape";
+}
+
+.cabecalho {
+    grid-area: cabecalho;
+    background-color: #a4d3a4;
+    color: white
+}
+
+.principal {
+    grid-area: principal;
+    height: calc(100vh - 180px);                       /*usar 100% da tela menos o 180px que é a soma do cabeçalho com o rodapé*/
+    background-color: #f0f0f0;
+    padding: 21px;                                     /*padding para não ficar grudado*/
+}
+
+.rodape {
+    grid-area: rodape;
+    background-color: #f0f0f0;
+    /*position: sticky;            para deixar o rodapé com tamanho fixo
+    bottom: 0px;*/
+}
