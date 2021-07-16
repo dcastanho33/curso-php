@@ -18,19 +18,123 @@ body {
 .cabecalho {
     grid-area: cabecalho;
     background-color: #a4d3a4;
-    color: white
+    color: white;
+    display: flex;                                     /*flex direction: todos os elementos dentro da mesma linha*/
+    flex-direction: column;                            /*flex direction column: coloca os elementos em coluna*/
+    justify-content: center;                           /*coloca o conteúdo no meio do cabeçalho*/
+    align-items: center;                               /*coloca o conteúdo no centro do cabeçalho*/
+    padding-bottom: 10px;                              /*dá mais um espaço no final do cabeçalho*/
+    z-index: 1;                                        /*pra aparecer melhor a sombra do box shadow*/
+    box-shadow: 0px 4px 9px -2px rgba(0,0,0,0.75);
+}
+
+.cabecalho > h1 {                                  /*editando a propriedade h1 do html (Curso PHP)*/
+    margin: 0px;
+    font-weight: 300;
+    font-size: 2.8rem;
+}
+
+.cabecalho > h2 {                                /*editando a propriedade h2 do html (índice dos Exercícios)*/
+    margin: 0px;
+    font-weight: 200;
+    font-size: 1.6rem;
 }
 
 .principal {
     grid-area: principal;
-    height: calc(100vh - 180px);                       /*usar 100% da tela menos o 180px que é a soma do cabeçalho com o rodapé*/
+    height: calc(100vh - 180px);                       /*altura fixa, os 100vh de altura subtraindo 180px que é o rodapé + cabeçalho*/
     background-color: #f0f0f0;
-    padding: 25px;                                     /*padding para não ficar grudado*/
+    padding: 20px;                                     /*padding para não ficar grudado*/
+    box-shadow: 0px 0px 25px 0px rgba(0,0,0,0.25);
+}
+
+.conteudo {
+    position: relative;
+    height: 100%;
+    overflow-y: scroll;                               /*se o conteúdo do eixo Y extrapolar, um scroll é adicionado para navegação*/
+    background-color: white;
+    padding: 20px;
 }
 
 .rodape {
     grid-area: rodape;
     background-color: #f0f0f0;
+    display: flex;
+    justify-content: flex-end;                       /* alinha pro final da linha*/
+    align-items: center;                             /* coloca o conteudo no meio */
+    font-size: 1.2rem;
+    padding: 0px 20px;                              /*0px pro eixo vertical, 20px pro eixo horizontal*/
+    color: #444
     /*position: sticky;            para deixar o rodapé com tamanho fixo
     bottom: 0px;*/
 }
+
+.modulos {
+    display: flex;                                  /*coloca todos os elementos em uma mesma linha*/
+    flex-wrap: wrap;                                /*permite a quebra de linha*/
+    justify-content: space-around;                  /*espaça os módulos*/
+}
+
+.modulo {
+    flex-basis: 32%;                                /*faz com que cada elemento (módulo) ocupe 32% da tela*/
+    margin-bottom: 20px;                            /*espaça uns pouco os módulos*/
+    border-radius: 5px;
+}
+
+.modulo > h3 {
+    margin: 0px;
+    color: white;
+    font-weight: 300;
+    font-size: 1.5rem;
+    padding: 10px 20px;
+    background-color: rgb(71, 138, 71)
+}
+
+.modulo > ul {                             /*faz modificações no elemento de lista*/
+    margin: 0px;
+    padding: 10px;
+    list-style: none;              /*tira as bolinhas da lista de exercícios*/
+}
+
+.modulo > ul > li {                       /*faz modificações referente a cada item da lista*/
+    padding: 10px;
+    font-size: 1.3rem;
+    cursor: pointer;                      /*quando o cursor passar em cima do item da lista ele muda de forma*/
+}
+
+.modulo > ul > li > a {                    /*faz modificações no estilo dos links*/
+    display: flex;
+    text-decoration: none;                 /*remove os sublinhados*/
+    color: #222;
+}
+
+.modulo > ul > li:hover {                /*coloca um hover na lista*/
+    background-color: #eee;
+}
+
+.modulo.verde{ border: 2px solid #a4d3a4 }
+.modulo.verde > h3 { background-color: #a4d3a4 }
+
+.modulo.vermelho{ border: 2px solid #ec7565 }
+.modulo.vermelho > h3 { background-color: #ec7565 }
+
+.modulo.azul{ border: 2px solid rgb(75, 198, 255) }
+.modulo.azul > h3 { background-color: rgb(75, 198, 255) }
+
+.modulo.roxo{ border: 2px solid rgb(155, 107, 167) }
+.modulo.roxo > h3 { background-color: rgb(155, 107, 167) }
+
+.modulo.laranja{ border: 2px solid rgb(243, 180, 64) }
+.modulo.laranja > h3 { background-color: rgb(243, 180, 64) }
+
+.modulo.verde-escuro{ border: 2px solid green }
+.modulo.verde-escuro > h3 { background-color: green }
+
+.modulo.vermelho-escuro{ border: 2px solid rgb(114, 0, 0) }
+.modulo.vermelho-escuro > h3 { background-color: rgb(114, 0, 0) }
+
+.modulo.azul-escuro{ border: 2px solid navy }
+.modulo.azul-escuro > h3 { background-color: navy }
+
+.modulo.roxo-escuro{ border: 2px solid rgb(65, 0, 65) }
+.modulo.roxo-escuro > h3 { background-color: rgb(65, 0, 65) }
