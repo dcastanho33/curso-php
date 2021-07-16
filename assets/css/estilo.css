@@ -25,7 +25,7 @@ body {
     grid-area: principal;
     height: calc(100vh - 180px);                       /*usar 100% da tela menos o 180px que é a soma do cabeçalho com o rodapé*/
     background-color: #f0f0f0;
-    padding: 22px;                                     /*padding para não ficar grudado*/
+    padding: 25px;                                     /*padding para não ficar grudado*/
 }
 
 .rodape {
