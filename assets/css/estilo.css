@@ -138,3 +138,13 @@ body {
 
 .modulo.roxo-escuro{ border: 2px solid rgb(65, 0, 65) }
 .modulo.roxo-escuro > h3 { background-color: rgb(65, 0, 65) }
+
+                       /*tirando a margem do parágrafo e do hr*/
+p.divisao {
+    margin-bottom: 0px;
+    font-weight: bold;
+}    
+
+hr {
+    margin-top: 0px;
+}    
