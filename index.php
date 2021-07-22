@@ -14,6 +14,19 @@
     <main class="principal">
         <div class="conteudo">    
             <nav class="modulos">
+                <div class="modulo verde-escuro">
+                    <h3>6. Repetições</h3>
+                    <ul>
+                        <li><a href="exercicio.php?dir=repeticoes&file=for">Laço FOR</a></li>
+                        <li><a href="exercicio.php?dir=repeticoes&file=desafio_for">Desafio FOR</a></li>
+                        <li><a href="exercicio.php?dir=repeticoes&file=foreach">FOR Each</a></li>
+                        <li><a href="exercicio.php?dir=repeticoes&file=break_continue">Break/Continue</a></li>
+                        <li><a href="exercicio.php?dir=repeticoes&file=desafio_impressao">Desafio Impressão</a></li>
+                        <li><a href="exercicio.php?dir=repeticoes&file=while_dowhile">While/Do While</a></li>
+                        <li><a href="exercicio.php?dir=repeticoes&file=desafio_tabela">Desafio Tabela #1</a></li>
+                        <li><a href="exercicio.php?dir=repeticoes&file=desafio_tabela2">Desafio Tabela #2</a></li>
+                    </ul>
+                </div>
                 <div class="modulo laranja">
                     <h3>5. Array</h3>
                     <ul>
