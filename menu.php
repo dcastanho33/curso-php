@@ -1,4 +1,12 @@
 <nav class="modulos">
+                <div class="modulo laranja-escuro">
+                    <h3>10. Namespaces</h3>
+                    <ul>
+                        <li><a href="exercicio.php?dir=namespace&file=basico">Exemplo Básico</a></li>
+                        <li><a href="exercicio.php?dir=namespace&file=sub_namespaces">Sub-Namespaces</a></li>
+                        <li><a href="exercicio.php?dir=namespace&file=use_as">Use/As</a></li>
+                    </ul>   
+                </div>
                 <div class="modulo roxo-escuro">
                     <h3>9. Includes</h3>
                     <ul>
